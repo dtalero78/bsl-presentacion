@@ -86,13 +86,13 @@ async function enviarResumen() {
     if (nombre && numero) {
       const mensaje = `Hola ${nombre}. Te envío un resumen de nuestra presentación:
 
-*Exámenes virtuales*: https://tuservidor.com/videos/video1.mp4
+*Exámenes virtuales*: https://dtalero78.github.io/bsl-presentacion/video1.mp4
 
-*Atención Médica Particular*: https://tuservidor.com/videos/video2.mp4
+*Atención Médica Particular*: https://dtalero78.github.io/bsl-presentacion/video2.mp4
 
-*Pruebas de Ansiedad y Depresión*: https://tuservidor.com/videos/video4.mp4
+*Pruebas de Ansiedad y Depresión*: https://dtalero78.github.io/bsl-presentacion/video4.mp4
 
-*Batería de Riesgo Psicosocial*: https://tuservidor.com/videos/video3.mp4
+*Batería de Riesgo Psicosocial*: https://dtalero78.github.io/bsl-presentacion/video3.mp4
 
 Gracias por participar en la reunión de *BSL*.
 
