@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSL Servicios</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header fijo con logo y botón -->
+ <div class="header-fixed">
+  <img src="img/logo.png" alt="Logo BSL" class="logo">
+  <button class="invitados-open-btn" onclick="abrirInvitados()">Lista Invitados</button>
+</div>
+
+  
+
+  <!-- Modal de invitados -->
+  <div class="modal" id="modal-invitados">
+    <div class="close-btn" onclick="cerrarInvitados()">✖</div>
+    <div class="modal-content">
+      <div id="grupos-container">
+        <div class="grupo-input">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Celular">
+          <button class="add-btn" onclick="agregarGrupo(this)">＋</button>
+        </div>
+      </div>
+      <button class="enviar-btn" onclick="enviarResumen()">Enviar resumen</button>
+    </div>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <img src="img/1.png" alt="Imagen 1" class="imagen-base slide active">
+    <img src="img/2.png" alt="Imagen 2" class="imagen-base slide">
+    <img src="img/3.png" alt="Imagen 3" class="imagen-base slide">
+    <img src="img/4.png" alt="Imagen 4" class="imagen-base slide">
+
+    <!-- Botones -->
+    <button class="nav-btn left" onclick="cambiarSlide(-1)">←</button>
+    <button class="nav-btn right" onclick="cambiarSlide(1)">→</button>
+
+    <!-- Zonas clicables -->
+    <div class="zona zona1" onclick="abrirVideo('videos/video1.mp4')"></div>
+    <div class="zona zona1a" onclick="abrirVideo('videos/Intro Pruebas.mp4')"></div>
+    <div class="zona zona1b" onclick="abrirVideo('videos/Audiometria.mp4')"></div>
+    <div class="zona zona2" onclick="abrirVideo('videos/video2.mp4')"></div>
+    <div class="zona zona2b" onclick="window.open('https://sea-lion-app-qcttp.ondigitalocean.app/?_id=b071b4a3-0339-42b3-bee7-8db1421c0781', '_blank')"></div>
+    <div class="zona zona3" onclick="abrirVideo('videos/video3.mp4')"></div>
+    <div class="zona zona4" onclick="abrirVideo('videos/video4.mp4')"></div>
+  </div>
+
+  <!-- Modal general -->
+  <div class="modal" id="modal">
+    <div class="close-btn" onclick="cerrarModal()">✖</div>
+    <video id="video" controls autoplay style="display: none;"></video>
+    <iframe id="iframe" style="display: none;" frameborder="0"></iframe>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
