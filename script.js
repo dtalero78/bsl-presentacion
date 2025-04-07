@@ -77,6 +77,11 @@ function agregarGrupo(btn) {
 
 async function enviarResumen() {
   const grupos = document.querySelectorAll(".grupo-input");
+  const boton = document.querySelector(".enviar-btn");
+
+  // Cambiar texto y desactivar botón
+  boton.textContent = "Enviando...";
+  boton.disabled = true;
 
   for (const grupo of grupos) {
     const inputs = grupo.querySelectorAll("input");
@@ -106,7 +111,17 @@ Daniel Talero`;
       }
     }
   }
+
+  // Cambiar texto a "Enviado con éxito"
+  boton.textContent = "Enviado con éxito ✅";
+
+  // Reactivar el botón luego de unos segundos (opcional)
+  setTimeout(() => {
+    boton.textContent = "Enviar resumen";
+    boton.disabled = false;
+  }, 4000);
 }
+
 
 function abrirInvitados() {
   document.getElementById("modal-invitados").classList.add("active");
